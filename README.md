@@ -120,3 +120,28 @@ OtherInfo
 
 其他说明:
     代码的识别暂时对身份证号码的时候做了比较多的优化,3w张发票识别率达到95以上,其他的暂未优化
+    
+ #补充
+ windows环境下需要
+ pip3 install opencv-python
+ pip install curl
+ pip install h5py
+ pip install mysqlclient
+ pip install threadpool
+ pip install cycler
+ 缺啥就pip 啥
+ 此外
+ 
+ text.py
+ 中需要修改如下
+并且不要忘记安装tessseract 
+ tesseract_exe_name = "C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe"
+ 
+ proc = subprocess.Popen(tesseract_exe_name + ' ' + path_img_src + ' ' + path_img_src + ' -l '+ lan , shell=False)
+ 
+ TODO
+ 人民币符号不能识别
+ 
+ 
+ 
+ 
